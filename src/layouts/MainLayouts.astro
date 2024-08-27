@@ -1,0 +1,36 @@
+---
+import Header from "@components/Header.astro";
+import Themes from "astro-themes";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <Themes defaultTheme="dark" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="flex min-h-full flex-col font-sans antialiased">
+    <Header />
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    --background-color: #e9f2e1;
+    --text-color-strong: #115e59;
+    --text-color: #00ac8a;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+  [data-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+  }
+</style>

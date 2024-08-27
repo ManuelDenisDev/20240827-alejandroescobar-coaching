@@ -1,0 +1,111 @@
+---
+import ButtonsThemes from "@utils/ButtonsThemes.astro";
+import { Image } from "astro:assets";
+
+// import imageLogo from "@images/logo-alejandro-escobar-coaching.svg";
+import { Icon } from "astro-icon/components";
+
+import Container from "@components/Container.astro";
+
+const navmenu = [
+  {
+    label: "Sobre mi",
+    href: "/#sobre-mi",
+  },
+  {
+    label: "Metodologia",
+    href: "/#metodologia",
+  },
+  {
+    label: "Servicios",
+    href: "/#servicios",
+  },
+  {
+    label: "Testimonios",
+    href: "/#testimonios",
+  },
+];
+---
+
+<div class="bg-loafer-100">
+  <div class="mx-auto w-full max-w-screen-xl px-5">
+    <header class="flex flex-col items-center justify-between py-5 lg:flex-row">
+      <div class="flex w-full items-center justify-between lg:w-auto">
+        <a href="/" class="text-lg flex gap-2 items-center">
+          <Icon
+            name="alejandro-escobar-logo-vector-web"
+            class={`translate-y-1`}
+            size={40}
+          />
+          <span class="text-3xl font-bold text-eden-800">Alejandro Escobar</span
+          >
+        </a>
+        <div class="block lg:hidden">
+          <button id="menu" aria-label="Toggle Menu">
+            <Icon
+              name="menu-deep"
+              size="24"
+              class="navmenu-toggle text-eden-800 hover:text-jungle-green-600"
+            />
+            <Icon
+              name="menu-center"
+              size="24"
+              class="navmenu-toggle hidden text-eden-800 hover:text-jungle-green-600"
+            />
+          </button>
+        </div>
+      </div>
+      <nav class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto navmenu-toggle">
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
+          {
+            navmenu.map((item, index) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="flex items-center py-2 font-medium text-eden-800 hover:text-jungle-green-600 lg:px-3"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+
+          {}
+        </ul>
+        <div class="mt-3 flex items-center gap-4 lg:hidden">
+          <a
+            href="#"
+            class="rounded-md text-center ring-gray-200 ring-offset-2 transition focus-visible:ring-2 w-full px-2 py-2 bg-white text-eden-800 hover:bg-jungle-green-600 border-2 border-transparent hover:text-white"
+            >Reservar 1º Cita</a
+          >
+          <a
+            href="#"
+            class="rounded-md text-center ring-gray-200 ring-offset-2 transition focus-visible:ring-2 w-full px-2 py-2 bg-jungle-green-600 text-white hover:bg-eden-800 border-2 border-transparent hover:text-white"
+            >WhatsApp</a
+          >
+        </div>
+      </nav>
+      <div>
+        <div class="hidden items-center gap-4 lg:flex">
+          <a
+            href="#"
+            class="rounded-lg text-center ring-gray-200 ring-offset-2 transition focus-visible:ring-2 px-6 py-3 font-medium bg-jungle-green-600 text-white hover:bg-eden-800 border-2 border-transparent hover:text-white"
+            >WhatsApp</a
+          >
+        </div>
+        <!-- <ButtonsThemes /> -->
+      </div>
+    </header>
+  </div>
+</div>
+
+<script>
+  const menuButton = document.getElementById("menu");
+  if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      [...document.querySelectorAll(".navmenu-toggle")].forEach((Element) => {
+        Element.classList.toggle("hidden");
+      });
+    });
+  }
+</script>

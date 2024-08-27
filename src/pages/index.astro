@@ -1,16 +1,68 @@
 ---
+import MainLayouts from "@layouts/MainLayouts.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
+import imageMountain from "@images/mountain.jpg";
+import imageHandshake from "@images/handshake.jpg";
+import { lazy } from "astro/zod";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayouts>
+  <div class="relative overflow-hidden bg-loafer-100 pt-10 md:pt-24">
+    <div
+      class="absolute -left-28 bottom-60 hidden text-pale-leaf-200/20 md:block"
+    >
+      <Icon name="bg-element-01" size={351} />
+    </div>
+    <div class="absolute -right-28 top-20 text-pale-leaf-200/20">
+      <Icon name="bg-element-02" size={351} />
+    </div>
+    <div class="mx-auto w-full max-w-screen-xl px-5">
+      <div class="relative mx-auto max-w-screen-xl">
+        <h1
+          class="mx-auto max-w-4xl py-6 text-center text-4xl font-bold text-eden-800 md:text-6xl"
+        >
+          Coaching para emprendedores
+        </h1>
+        <p
+          class="mx-auto max-w-3xl py-6 text-center text-2xl font-semibold md:text-4xl leading-normal text-eden-800"
+        >
+          🚀 De Emprendedor a Empresario 🚀
+        </p>
+        <p
+          class="mx-auto max-w-3xl py-3 text-center text-xl leading-normal text-eden-800"
+        >
+          Acompañamiento personalizado para emprendedores que buscan transformar
+          su idea en un negocio rentable.
+        </p>
+        <div class="m-auto flex flex-wrap justify-center gap-4 text-center">
+          <a
+            href="#"
+            target="_blank"
+            class="w-full rounded-lg bg-jungle-green-600 px-8 py-5 text-lg font-medium text-white transition hover:bg-eden-800 sm:w-auto"
+            >Reserva 1º Cita</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="w-full rounded-lg bg-white px-8 py-5 text-lg font-medium text-eden-800 transition hover:text-white hover:bg-jungle-green-600 sm:w-auto"
+            >WhatsApp</a
+          >
+        </div>
+        <div
+          class="mx-auto mt-16 flex max-w-5xl rounded-tr-lg justify-center sm:mt-20 sm:px-10"
+        >
+          <Image
+            src={imageHandshake}
+            alt="Handshake"
+            class={"rounded-t-full"}
+            width={1500}
+            height={1500}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayouts>
