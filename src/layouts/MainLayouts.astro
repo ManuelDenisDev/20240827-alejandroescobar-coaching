@@ -1,18 +1,17 @@
 ---
 import Header from "@components/Header.astro";
+import BaseHead from "@layouts/components/BaseHead.astro";
 import Themes from "astro-themes";
 import "@styles/global.css";
+
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
     <Themes defaultTheme="dark" />
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Coaching para emprendedores | Profesionaliza tu negocio</title>
+    <BaseHead title={title} description={description} image={image} />
   </head>
   <body
     class="flex min-h-full flex-col font-sans antialiased bg-white text-eden-800 appearance-none"
@@ -22,7 +21,7 @@ import "@styles/global.css";
   </body>
 </html>
 
-<!-- <style is:global>
+<style is:global>
   root: {
     --background-color: #ffffff;
     --text-primary: #00ac8a;
@@ -40,4 +39,4 @@ import "@styles/global.css";
     --background-color: white;
     --text-color: var(--text-primary-strong);
   }
-</style> -->
+</style>

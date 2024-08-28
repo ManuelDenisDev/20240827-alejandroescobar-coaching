@@ -1,10 +1,13 @@
 ---
+import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from "@src/consts";
+
 import MainLayouts from "@layouts/MainLayouts.astro";
 import { Image } from "astro:assets";
 
 import imageHandshake from "@images/handshake.jpg";
 import imageSmilling from "@images/smiling-colleagues-work.jpg";
-import imageLogo0 from "@images/alejandro-escobar-logo-vector-web.svg";
+import imagePensive from "@images/pensive-man-looking-white-board.jpg";
+import imageLogo0 from "@svg/logo-nuevo.svg";
 import imageLogo1 from "@images/logo1.webp";
 import imageLogo2 from "@images/logo2.webp";
 import imageLogo3 from "@images/logo3.webp";
@@ -13,9 +16,15 @@ import imageLogo5 from "@images/logo5.webp";
 
 import HeroBackground from "@ui/HeroBackground.astro";
 import { Icon } from "astro-icon/components";
+import ContainerSection from "@ui/ContainerSection.astro";
+import ButtonPrimeraCita from "@utils/ButtonPrimeraCita.astro";
 ---
 
-<MainLayouts>
+<MainLayouts
+  title={SITE_TITLE + " | " + SITE_TAGLINE}
+  description={SITE_DESCRIPTION}
+>
+  <!--========================= HERO =========================-->
   <div class="relative overflow-hidden bg-loafer-100 pt-10 md:pt-24">
     <HeroBackground />
     <div class="mx-auto w-full max-w-screen-xl px-5">
@@ -37,12 +46,7 @@ import { Icon } from "astro-icon/components";
           su idea en un negocio rentable.
         </p>
         <div class="m-auto flex flex-wrap justify-center gap-4 text-center">
-          <a
-            href="#"
-            target="_blank"
-            class="w-full rounded-lg bg-jungle-green-600 px-8 py-5 text-lg font-medium text-white transition hover:bg-eden-800 sm:w-auto"
-            >Reserva 1º Cita</a
-          >
+          <ButtonPrimeraCita />
           <a
             href="#"
             target="_blank"
@@ -141,6 +145,166 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
     </div>
+  </div>
+  <!--==================== PLAN DE ACCION ====================-->
+  <div class="bg-loafer-100 py-24">
+    <ContainerSection>
+      <div class="grid grid-cols-1 items-center gap-10 sm:grid-cols-2">
+        <div class="flex flex-col gap-8">
+          <h3
+            class="max-w-xl text-3xl font-bold leading-normal text-eden-800 text-balance md:text-4xl"
+          >
+            Transforma tu negocio con sesiones de coaching 1:1 personalizadas.
+          </h3>
+          <p class="text-lg leading-8 text-eden-800 text-wrap">
+            Reserva una sesión de coaching para emprendedores, sin compromiso
+            alguno. Exploraremos juntos los desafíos que enfrentas a diario,
+            analizaremos la situación actual del negocio y crearemos un plan de
+            acción personalizado para impulsar tu negocio e iniciar los cambios
+            necesarios para alcanzar las metas que te marques.
+          </p>
+          <p class="text-lg leading-8 text-eden-800 text-wrap">
+            ¿Estás listo para transformar tu negocio y llevarlo al siguiente
+            nivel? ¡Reserva tu primera sesión de coaching gratuita!
+          </p>
+          <div class="flex items-center text-center">
+            <ButtonPrimeraCita />
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -right-1/4 -top-1/4 z-0 hidden 2xl:block text-pale-leaf-200/20"
+          >
+            <Icon name="bg-element-02" size={351} />
+          </div>
+          <div class="relative z-10">
+            <Image
+              src={imagePensive}
+              alt="Hombre pensativo"
+              class="rounded-lg"
+              width={640}
+              height={441}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </ContainerSection>
+  </div>
+  <!--======================= SOBRE MI =======================-->
+  <div class="py-24" id="servicios">
+    <ContainerSection>
+      <div>
+        <h2 class="text-center text-3xl font-bold text-eden-800 md:text-5xl">
+          Servicios
+        </h2>
+        <p
+          class="mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800"
+        >
+          Acompañamiento personalizado para emprendedores que buscan transformar
+          su idea en un negocio rentable.
+        </p>
+      </div>
+      <div class="mt-20">
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+          <div
+            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
+          >
+            <div class="flex items-center">
+              <div
+                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon
+                  name="hands-helping"
+                  class="size-16 text-jungle-green-600"
+                />
+              </div>
+            </div>
+            <div class="text-center md:text-start">
+              <h3 class="text-2xl font-semibold text-eden-800">
+                Coaching Personal
+              </h3>
+              <p class="pt-2 text-eden-800">
+                Sesiones de coaching personalizadas online para profesionales
+                1:1. Acompañamiento individualizado orientado a lo que realmente
+                importa, <strong class="font-semibold">tus éxitos</strong>.
+              </p>
+              <p class="pt-2 text-eden-800">
+                Si quieres relanzar tu carrera profesional este es tu programa
+                de coaching.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
+          >
+            <div class="flex items-center">
+              <div
+                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon name="book" class="size-16 text-jungle-green-600" />
+              </div>
+            </div>
+            <div class="text-center md:text-start">
+              <h3 class="text-2xl font-semibold text-eden-800">
+                Formación y Talleres
+              </h3>
+              <p class="pt-2 text-eden-800">
+                Formaciones online 1:1 y talleres grupales bajo de demanda.
+              </p>
+              <p class="pt-2 text-eden-800">
+                Gestión y desarrollo de equipos, liderazgo, gestión de
+                conflictos, mejora contínua de procesos, etc.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
+          >
+            <div class="flex items-center">
+              <div
+                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon
+                  name="flow-connection"
+                  class="size-16 text-jungle-green-600"
+                />
+              </div>
+            </div>
+            <div class="text-center md:text-start">
+              <h3 class="text-2xl font-semibold text-eden-800">
+                Mejora de Procesos
+              </h3>
+              <p class="pt-2 text-eden-800">
+                Servicios de mejoras de procesos mediante la metodología Lean
+                Six Sigma.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
+          >
+            <div class="flex items-center">
+              <div
+                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon name="suitcase" class="size-16 text-jungle-green-600" />
+              </div>
+            </div>
+            <div class="text-center md:text-start">
+              <h3 class="text-2xl font-semibold text-eden-800">
+                Consultoría de Negocios
+              </h3>
+              <p class="pt-2 text-eden-800">
+                Servicio de consultoría para tu negocio, análisis de la
+                situación actual del negocio, identificando áreas de mejora y
+                definición de un plan de acción.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ContainerSection>
   </div>
   <!--================== NUESTROS CLIENTES ===================-->
   <div class="border-t py-24">

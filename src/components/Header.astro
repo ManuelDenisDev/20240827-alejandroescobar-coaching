@@ -1,24 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
+import { HeaderLinks } from "@lib/HeaderLinks";
 
-const navmenu = [
-  {
-    label: "Sobre mi",
-    href: "/#sobre-mi",
-  },
-  {
-    label: "Metodologia",
-    href: "/#metodologia",
-  },
-  {
-    label: "Servicios",
-    href: "/#servicios",
-  },
-  {
-    label: "Testimonios",
-    href: "/#testimonios",
-  },
-];
+const NavLinks = HeaderLinks;
 ---
 
 <div class="bg-loafer-100">
@@ -53,7 +37,7 @@ const navmenu = [
       <nav class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto navmenu-toggle">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            navmenu.map((item, index) => (
+            NavLinks.map((item, index) => (
               <li>
                 <a
                   href={item.href}
