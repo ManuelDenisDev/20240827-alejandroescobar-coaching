@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Themes from "astro-themes";
+import "@styles/global.css";
 ---
 
 <!doctype html>
@@ -13,13 +14,15 @@ import Themes from "astro-themes";
     <meta name="generator" content={Astro.generator} />
     <title>Coaching para emprendedores | Profesionaliza tu negocio</title>
   </head>
-  <body class="flex min-h-full flex-col font-sans antialiased">
+  <body
+    class="flex min-h-full flex-col font-sans antialiased bg-white text-eden-800"
+  >
     <Header />
     <slot />
   </body>
 </html>
 
-<style is:global>
+<!-- <style is:global>
   root: {
     --background-color: #ffffff;
     --text-primary: #00ac8a;
@@ -37,4 +40,4 @@ import Themes from "astro-themes";
     --background-color: white;
     --text-color: var(--text-primary-strong);
   }
-</style>
+</style> -->
