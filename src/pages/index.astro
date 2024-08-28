@@ -1,23 +1,23 @@
 ---
 import MainLayouts from "@layouts/MainLayouts.astro";
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import imageMountain from "@images/mountain.jpg";
 import imageHandshake from "@images/handshake.jpg";
-import { lazy } from "astro/zod";
+import imageSmilling from "@images/smiling-colleagues-work.jpg";
+import imageLogo0 from "@images/alejandro-escobar-logo-vector-web.svg";
+import imageLogo1 from "@images/logo1.webp";
+import imageLogo2 from "@images/logo2.webp";
+import imageLogo3 from "@images/logo3.webp";
+import imageLogo4 from "@images/logo4.webp";
+import imageLogo5 from "@images/logo5.webp";
+
+import HeroBackground from "@ui/HeroBackground.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <MainLayouts>
   <div class="relative overflow-hidden bg-loafer-100 pt-10 md:pt-24">
-    <div
-      class="absolute -left-28 bottom-60 hidden text-pale-leaf-200/20 md:block"
-    >
-      <Icon name="bg-element-01" size={351} />
-    </div>
-    <div class="absolute -right-28 top-20 text-pale-leaf-200/20">
-      <Icon name="bg-element-02" size={351} />
-    </div>
+    <HeroBackground />
     <div class="mx-auto w-full max-w-screen-xl px-5">
       <div class="relative mx-auto max-w-screen-xl">
         <h1
@@ -65,4 +65,300 @@ import { lazy } from "astro/zod";
       </div>
     </div>
   </div>
+  <!--======================= SOBRE MI =======================-->
+  <div class="py-24" id="sobre-mi">
+    <div class="mx-auto w-full max-w-screen-xl px-5">
+      <div class="z-10 mb-14">
+        <h2 class="text-center text-3xl font-bold text-eden-800 md:text-5xl">
+          Sobre mi
+        </h2>
+        <p
+          class="mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800"
+        >
+          Soy <span class="font-semibold">Alejandro Escobar</span>, emprendedor
+          y coach de negocios. Ayudo a emprendedores a transformar su idea en un
+          negocio rentable. Mi misión es <span class="font-semibold"
+            >acompañarte</span
+          > en el proceso de creación y desarrollo de tu negocio, para que puedas
+          <span class="font-semibold">alcanzar tus objetivos</span> y vivir la vida
+          que deseas.
+        </p>
+      </div>
+      <div class="grid gap-14 md:grid-cols-3">
+        <div class="md:col-span-2">
+          <Image
+            src={imageSmilling}
+            alt="Reunion de Alejandro Escobar con unos clientes"
+            class="rounded-lg object-cover h-full w-full"
+            width={1152}
+            height={768}
+            loading="lazy"
+          />
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="rounded-xl border px-10 py-6">
+            <div class="flex items-center gap-4">
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon name="target" class="size-8 text-jungle-green-600" />
+              </div>
+              <h3 class="text-2xl font-semibold text-eden-800">Mi Propósito</h3>
+            </div>
+            <p class="mt-2 text-eden-800">
+              Ayudar a emprendedores a transformar su idea en un negocio
+              rentable y sostenible.
+            </p>
+          </div>
+          <div class="rounded-xl border px-10 py-6">
+            <div class="flex items-center gap-4">
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon name="star" class="size-8 text-jungle-green-600" />
+              </div>
+              <h3 class="text-2xl font-semibold text-eden-800">Mi Misión</h3>
+            </div>
+            <p class="mt-2 text-eden-800">
+              Acompañarte en el proceso de creación y desarrollo de tu negocio,
+              para que puedas alcanzar tus objetivos y vivir la vida que deseas.
+            </p>
+          </div>
+          <div class="rounded-xl border px-10 py-6">
+            <div class="flex items-center gap-4">
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+              >
+                <Icon name="lightbulb" class="size-8 text-jungle-green-600" />
+              </div>
+              <h3 class="text-2xl font-semibold text-eden-800">Mi Visión</h3>
+            </div>
+            <p class="mt-2 text-eden-800">
+              Ser el coach de negocios de referencia para emprendedores que
+              buscan transformar su idea en un negocio rentable y sostenible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--================== NUESTROS CLIENTES ===================-->
+  <div class="border-t py-24">
+    <div class="mx-auto w-full max-w-screen-xl px-5">
+      <div class="flex flex-wrap items-center justify-center gap-10">
+        <div>
+          <Image
+            src={imageLogo1}
+            alt="Logo de empresa"
+            width={143}
+            height={34}
+            class="opacity-50 transition-opacity hover:opacity-100"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Image
+            src={imageLogo2}
+            alt="Logo de empresa"
+            width={143}
+            height={34}
+            class="opacity-50 transition-opacity hover:opacity-100"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <Image
+            src={imageLogo3}
+            alt="Logo de empresa"
+            width={143}
+            height={34}
+            class="opacity-50 transition-opacity hover:opacity-100"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <Image
+            src={imageLogo4}
+            alt="Logo de empresa"
+            width={143}
+            height={34}
+            class="opacity-50 transition-opacity hover:opacity-100"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <Image
+            src={imageLogo5}
+            alt="Logo de empresa"
+            width={143}
+            height={34}
+            class="opacity-50 transition-opacity hover:opacity-100"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--======================== FOOTER ========================-->
+  <footer class="mt-16 bg-eden-800">
+    <div class="mx-auto w-full max-w-screen-xl px-5">
+      <div
+        class="-mt-20 mb-16 grid grid-cols-1 gap-10 rounded-xl bg-loafer-100 px-6 py-6 md:grid-cols-2 md:px-20 md:py-14"
+      >
+        <div>
+          <h3
+            class="max-w-sm text-2xl font-semibold leading-8 text-swamp-green-300 md:pr-6"
+          >
+            Todas las novedades directo a tu bandeja de entrada. <span
+              class="text-eden-800">Suscríbete al boletín semanal.</span
+            >
+          </h3>
+        </div>
+        <form action="">
+          <div
+            class="relative flex flex-col gap-5 rounded-2xl shadow-sm sm:flex-row sm:gap-0"
+          >
+            <input
+              type="email"
+              name="email"
+              class="block flex-1 rounded-lg border-2 border-white px-6 py-5 ps-14 text-sm focus:z-10 focus:border-jungle-green-600 focus:outline-none sm:rounded-s-2xl"
+              placeholder="Tu correo electrónico"
+            />
+            <div
+              class="pointer-events-none absolute start-0 top-5 z-20 flex items-center ps-5 opacity-60 sm:inset-y-0"
+            >
+              <Icon name="mail" size={25} class="text-jungle-green-600" />
+            </div>
+            <button
+              type="submit"
+              class="items-center justify-center gap-x-2 rounded-lg border border-transparent bg-jungle-green-600 px-8 py-5 font-semibold text-white hover:bg-eden-800 sm:rounded-e-2xl"
+              >Suscribirme</button
+            >
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-10">
+        <div class="flex flex-col gap-4 items-center md:items-start">
+          <div class="text-center">
+            <Image
+              src={imageLogo0}
+              alt="Logo de Alejandro Escobar Coaching"
+              width={100}
+              height={100}
+              loading="lazy"
+            />
+          </div>
+          <h2
+            class="mb-4 text-4xl font-semibold text-white opacity-75 text-center md:text-left"
+          >
+            Alejandro Escobar
+          </h2>
+        </div>
+        <div>
+          <ul class="leading-10 text-center md:text-left">
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Sobre mi</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Metodologia</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Testimonios</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="leading-10 text-center md:text-left">
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Zaask</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >WhatsApp Bussines</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="leading-10 text-center md:text-left">
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >X</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+                >Threads</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-16 flex flex-col gap-2 border-t border-white border-opacity-20 py-10 text-center md:flex-row md:justify-between md:text-start"
+      >
+        <p class="font-light text-white opacity-75">
+          © 2024 Alejandro Escobar. Todos los derechos reservados.
+        </p>
+        <p class="font-light text-white opacity-75">
+          Desarrollado por <a href="#" class="text-jungle-green-600"
+            >Manuel Denis Developer.</a
+          >
+        </p>
+      </div>
+    </div>
+  </footer>
 </MainLayouts>

@@ -1,10 +1,5 @@
 ---
-import ButtonsThemes from "@utils/ButtonsThemes.astro";
-import { Image } from "astro:assets";
-
-// import imageLogo from "@images/logo-alejandro-escobar-coaching.svg";
 import { Icon } from "astro-icon/components";
-
 
 const navmenu = [
   {
@@ -36,7 +31,8 @@ const navmenu = [
             class={`translate-y-1`}
             size={40}
           />
-          <span class="text-3xl font-bold text-eden-800">Alejandro Escobar</span
+          <span class="text-xl font-semibold text-eden-800"
+            >Alejandro Escobar</span
           >
         </a>
         <div class="block lg:hidden">
@@ -61,7 +57,7 @@ const navmenu = [
               <li>
                 <a
                   href={item.href}
-                  class="flex items-center py-2 font-medium text-eden-800 hover:text-jungle-green-600 lg:px-3"
+                  class="flex items-center py-2 text-eden-800 hover:text-jungle-green-600 lg:px-3"
                 >
                   {item.label}
                 </a>

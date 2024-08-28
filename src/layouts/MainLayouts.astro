@@ -11,9 +11,9 @@ import Themes from "astro-themes";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Coaching para emprendedores | Profesionaliza tu negocio</title>
   </head>
-  <body class="flex min-h-full flex-col font-sans antialiased">
+  <body class="flex min-h-full flex-col font-sans antialiased scroll-smooth">
     <Header />
     <slot />
   </body>
@@ -21,11 +21,13 @@ import Themes from "astro-themes";
 
 <style>
   html {
-    --background-color: #e9f2e1;
-    --text-color-strong: #115e59;
-    --text-color: #00ac8a;
+    --background-color: #ffffff;
+    --text-primary: #00ac8a;
+    --text-primary-strong: #115e59;
+    --text-primary-medium: #a1b58f;
+    --text-primary-accent: #cdddc0;
 
-    color: var(--text-color);
+    color: var(--text-primary);
     background-color: var(--background-color);
   }
 
