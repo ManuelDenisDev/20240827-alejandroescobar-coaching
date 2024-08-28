@@ -7,9 +7,10 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
-      "@images/*": ["src/assets/images/*"],
+      "@images/*": ["src/images/*"],
       "@ui/*": ["src/ui/*"],
-      "@icons/*": ["src/icons/*"]
+      "@icons/*": ["src/icons/*"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }

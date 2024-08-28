@@ -1,10 +1,11 @@
 ---
 import Header from "@components/Header.astro";
 import Themes from "astro-themes";
+import "@styles/global.css";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <Themes defaultTheme="dark" />
     <meta charset="utf-8" />
@@ -13,7 +14,7 @@ import Themes from "astro-themes";
     <meta name="generator" content={Astro.generator} />
     <title>Coaching para emprendedores | Profesionaliza tu negocio</title>
   </head>
-  <body class="flex min-h-full flex-col font-sans antialiased scroll-smooth">
+  <body class="flex min-h-full flex-col font-sans antialiased">
     <Header />
     <slot />
   </body>
