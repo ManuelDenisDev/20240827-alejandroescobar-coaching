@@ -1,145 +1,130 @@
 ---
-import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from "@src/consts";
+import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '@src/consts'
 
-import MainLayouts from "@layouts/MainLayouts.astro";
-import { Image } from "astro:assets";
+import MainLayouts from '@layouts/MainLayouts.astro'
+import { Image } from 'astro:assets'
 
-import imageHandshake from "@images/handshake.jpg";
-import imageSmilling from "@images/smiling-colleagues-work.jpg";
-import imagePensive from "@images/pensive-man-looking-white-board.jpg";
-import imageLogo0 from "@svg/logo-nuevo.svg";
-import imageLogo1 from "@images/logo1.webp";
-import imageLogo2 from "@images/logo2.webp";
-import imageLogo3 from "@images/logo3.webp";
-import imageLogo4 from "@images/logo4.webp";
-import imageLogo5 from "@images/logo5.webp";
+import imageHandshake from '@images/handshake.jpg'
+import imageSmilling from '@images/smiling-colleagues-work.jpg'
+import imagePensive from '@images/pensive-man-looking-white-board.jpg'
+import imageLogo0 from '@svg/logo-nuevo.svg'
+import imageLogo1 from '@images/logo1.webp'
+import imageLogo2 from '@images/logo2.webp'
+import imageLogo3 from '@images/logo3.webp'
+import imageLogo4 from '@images/logo4.webp'
+import imageLogo5 from '@images/logo5.webp'
 
-import HeroBackground from "@ui/HeroBackground.astro";
-import { Icon } from "astro-icon/components";
-import ContainerSection from "@ui/ContainerSection.astro";
-import ButtonPrimeraCita from "@utils/ButtonPrimeraCita.astro";
+import videoTestimonio1 from '@videos/testimonio1.mp4'
+import videoTestimonio2 from '@videos/testimonio2.mp4'
+import videoTestimonio3 from '@videos/testimonio3.mp4'
+
+import HeroBackground from '@ui/HeroBackground.astro'
+import { Icon } from 'astro-icon/components'
+import ContainerSection from '@ui/ContainerSection.astro'
+import ButtonPrimeraCita from '@utils/ButtonPrimeraCita.astro'
 ---
 
-<MainLayouts
-  title={SITE_TITLE + " | " + SITE_TAGLINE}
-  description={SITE_DESCRIPTION}
->
+<MainLayouts title={SITE_TITLE + ' | ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
   <!--========================= HERO =========================-->
-  <div class="relative overflow-hidden bg-loafer-100 pt-10 md:pt-24">
+  <div class='relative overflow-hidden bg-loafer-100 pt-10 md:pt-24'>
     <HeroBackground />
-    <div class="mx-auto w-full max-w-screen-xl px-5">
-      <div class="relative mx-auto max-w-screen-xl">
-        <h1
-          class="mx-auto max-w-4xl py-6 text-center text-4xl font-bold text-eden-800 md:text-6xl"
-        >
+    <div class='mx-auto w-full max-w-screen-xl px-5'>
+      <div class='relative mx-auto max-w-screen-xl'>
+        <h1 class='mx-auto max-w-4xl py-6 text-center text-4xl font-bold text-eden-800 md:text-6xl'>
           Coaching para emprendedores
         </h1>
-        <p
-          class="mx-auto max-w-3xl py-6 text-center text-2xl font-semibold md:text-4xl leading-normal text-eden-800"
-        >
+        <p class='mx-auto max-w-3xl py-6 text-center text-2xl font-semibold md:text-4xl leading-normal text-eden-800'>
           🚀 De Emprendedor a Empresario 🚀
         </p>
-        <p
-          class="mx-auto max-w-3xl py-3 text-center text-xl leading-normal text-eden-800"
-        >
-          Acompañamiento personalizado para emprendedores que buscan transformar
-          su idea en un negocio rentable.
+        <p class='mx-auto max-w-3xl py-3 text-center text-xl leading-normal text-eden-800'>
+          Acompañamiento personalizado para emprendedores que buscan transformar su idea en un negocio rentable.
         </p>
-        <div class="m-auto flex flex-wrap justify-center gap-4 text-center">
+        <div class='m-auto flex flex-wrap justify-center gap-4 text-center'>
           <ButtonPrimeraCita />
           <a
-            href="#"
-            target="_blank"
-            class="w-full rounded-lg bg-white px-8 py-5 text-lg font-medium text-eden-800 transition hover:text-white hover:bg-jungle-green-600 sm:w-auto"
+            href='#'
+            target='_blank'
+            class='w-full rounded-lg bg-white px-8 py-5 text-lg font-medium text-eden-800 transition hover:text-white hover:bg-jungle-green-600 sm:w-auto'
             >WhatsApp</a
           >
         </div>
-        <div
-          class="mx-auto mt-16 flex max-w-5xl rounded-tr-lg justify-center sm:mt-20 sm:px-10"
-        >
+        <div class='mx-auto mt-16 flex max-w-5xl rounded-tr-lg justify-center sm:mt-20 sm:px-10'>
           <Image
             src={imageHandshake}
-            alt="Handshake"
-            class={"rounded-t-full"}
+            alt='Handshake'
+            class={'rounded-t-full'}
             width={1500}
             height={1500}
-            loading="lazy"
+            loading='lazy'
           />
         </div>
       </div>
     </div>
   </div>
   <!--======================= SOBRE MI =======================-->
-  <div class="py-24" id="sobre-mi">
-    <div class="mx-auto w-full max-w-screen-xl px-5">
-      <div class="z-10 mb-14">
-        <h2 class="text-center text-3xl font-bold text-eden-800 md:text-5xl">
-          Sobre mi
-        </h2>
-        <p
-          class="mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800"
-        >
-          Soy <span class="font-semibold">Alejandro Escobar</span>, emprendedor
-          y coach de negocios. Ayudo a emprendedores a transformar su idea en un
-          negocio rentable. Mi misión es <span class="font-semibold"
+  <div class='py-24' id='sobre-mi'>
+    <div class='mx-auto w-full max-w-screen-xl px-5'>
+      <div class='z-10 mb-14'>
+        <h2 class='text-center text-3xl font-bold text-eden-800 md:text-5xl'>Sobre mi</h2>
+        <p class='mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800'>
+          Soy <span class='font-semibold'>Alejandro Escobar</span>, emprendedor y coach de negocios. Ayudo a
+          emprendedores a transformar su idea en un negocio rentable. Mi misión es <span class='font-semibold'
             >acompañarte</span
           > en el proceso de creación y desarrollo de tu negocio, para que puedas
-          <span class="font-semibold">alcanzar tus objetivos</span> y vivir la vida
-          que deseas.
+          <span class='font-semibold'>alcanzar tus objetivos</span> y vivir la vida que deseas.
         </p>
       </div>
-      <div class="grid gap-14 md:grid-cols-3">
-        <div class="md:col-span-2">
+      <div class='grid gap-14 md:grid-cols-3'>
+        <div class='md:col-span-2'>
           <Image
             src={imageSmilling}
-            alt="Reunion de Alejandro Escobar con unos clientes"
-            class="rounded-lg object-cover h-full w-full"
+            alt='Reunion de Alejandro Escobar con unos clientes'
+            class='rounded-lg object-cover h-full w-full'
             width={1152}
             height={768}
-            loading="lazy"
+            loading='lazy'
           />
         </div>
-        <div class="flex flex-col gap-6">
-          <div class="rounded-xl border px-10 py-6">
-            <div class="flex items-center gap-4">
+        <div class='flex flex-col gap-6'>
+          <div class='rounded-xl border px-10 py-6'>
+            <div class='flex items-center gap-4'>
               <div
-                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
+                class='flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'
               >
-                <Icon name="target" class="size-8 text-jungle-green-600" />
+                <Icon name='target' class='size-8 text-jungle-green-600' />
               </div>
-              <h3 class="text-2xl font-semibold text-eden-800">Mi Propósito</h3>
+              <h3 class='text-2xl font-semibold text-eden-800'>Mi Propósito</h3>
             </div>
-            <p class="mt-2 text-eden-800">
-              Ayudar a emprendedores a transformar su idea en un negocio
+            <p class='mt-2 text-eden-800'>
+              Ayudar a emprendedores a transformar su idea en un negocio rentable y sostenible.
+            </p>
+          </div>
+          <div class='rounded-xl border px-10 py-6'>
+            <div class='flex items-center gap-4'>
+              <div
+                class='flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'
+              >
+                <Icon name='star' class='size-8 text-jungle-green-600' />
+              </div>
+              <h3 class='text-2xl font-semibold text-eden-800'>Mi Misión</h3>
+            </div>
+            <p class='mt-2 text-eden-800'>
+              Acompañarte en el proceso de creación y desarrollo de tu negocio, para que puedas alcanzar tus objetivos y
+              vivir la vida que deseas.
+            </p>
+          </div>
+          <div class='rounded-xl border px-10 py-6'>
+            <div class='flex items-center gap-4'>
+              <div
+                class='flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'
+              >
+                <Icon name='lightbulb' class='size-8 text-jungle-green-600' />
+              </div>
+              <h3 class='text-2xl font-semibold text-eden-800'>Mi Visión</h3>
+            </div>
+            <p class='mt-2 text-eden-800'>
+              Ser el coach de negocios de referencia para emprendedores que buscan transformar su idea en un negocio
               rentable y sostenible.
-            </p>
-          </div>
-          <div class="rounded-xl border px-10 py-6">
-            <div class="flex items-center gap-4">
-              <div
-                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon name="star" class="size-8 text-jungle-green-600" />
-              </div>
-              <h3 class="text-2xl font-semibold text-eden-800">Mi Misión</h3>
-            </div>
-            <p class="mt-2 text-eden-800">
-              Acompañarte en el proceso de creación y desarrollo de tu negocio,
-              para que puedas alcanzar tus objetivos y vivir la vida que deseas.
-            </p>
-          </div>
-          <div class="rounded-xl border px-10 py-6">
-            <div class="flex items-center gap-4">
-              <div
-                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon name="lightbulb" class="size-8 text-jungle-green-600" />
-              </div>
-              <h3 class="text-2xl font-semibold text-eden-800">Mi Visión</h3>
-            </div>
-            <p class="mt-2 text-eden-800">
-              Ser el coach de negocios de referencia para emprendedores que
-              buscan transformar su idea en un negocio rentable y sostenible.
             </p>
           </div>
         </div>
@@ -147,158 +132,202 @@ import ButtonPrimeraCita from "@utils/ButtonPrimeraCita.astro";
     </div>
   </div>
   <!--==================== PLAN DE ACCION ====================-->
-  <div class="bg-loafer-100 py-24">
+  <div class='bg-loafer-100 py-24'>
     <ContainerSection>
-      <div class="grid grid-cols-1 items-center gap-10 sm:grid-cols-2">
-        <div class="flex flex-col gap-8">
-          <h3
-            class="max-w-xl text-3xl font-bold leading-normal text-eden-800 text-balance md:text-4xl"
-          >
+      <div class='grid grid-cols-1 items-center gap-10 sm:grid-cols-2'>
+        <div class='flex flex-col gap-8'>
+          <h3 class='max-w-xl text-3xl font-bold leading-normal text-eden-800 text-balance md:text-4xl'>
             Transforma tu negocio con sesiones de coaching 1:1 personalizadas.
           </h3>
-          <p class="text-lg leading-8 text-eden-800 text-wrap">
-            Reserva una sesión de coaching para emprendedores, sin compromiso
-            alguno. Exploraremos juntos los desafíos que enfrentas a diario,
-            analizaremos la situación actual del negocio y crearemos un plan de
-            acción personalizado para impulsar tu negocio e iniciar los cambios
-            necesarios para alcanzar las metas que te marques.
+          <p class='text-lg leading-8 text-eden-800 text-wrap'>
+            Reserva una sesión de coaching para emprendedores, sin compromiso alguno. Exploraremos juntos los desafíos
+            que enfrentas a diario, analizaremos la situación actual del negocio y crearemos un plan de acción
+            personalizado para impulsar tu negocio e iniciar los cambios necesarios para alcanzar las metas que te
+            marques.
           </p>
-          <p class="text-lg leading-8 text-eden-800 text-wrap">
-            ¿Estás listo para transformar tu negocio y llevarlo al siguiente
-            nivel? ¡Reserva tu primera sesión de coaching gratuita!
+          <p class='text-lg leading-8 text-eden-800 text-wrap'>
+            ¿Estás listo para transformar tu negocio y llevarlo al siguiente nivel? ¡Reserva tu primera sesión de
+            coaching gratuita!
           </p>
-          <div class="flex items-center text-center">
+          <div class='flex items-center text-center'>
             <ButtonPrimeraCita />
           </div>
         </div>
-        <div class="relative">
-          <div
-            class="absolute -right-1/4 -top-1/4 z-0 hidden 2xl:block text-pale-leaf-200/20"
-          >
-            <Icon name="bg-element-02" size={351} />
+        <div class='relative'>
+          <div class='absolute -right-1/4 -top-1/4 z-0 hidden 2xl:block text-pale-leaf-200/20'>
+            <Icon name='bg-element-02' size={351} />
           </div>
-          <div class="relative z-10">
+          <div class='relative z-10'>
             <Image
               src={imagePensive}
-              alt="Hombre pensativo"
-              class="rounded-lg"
+              alt='Hombre pensativo'
+              class='rounded-lg'
               width={640}
               height={441}
-              loading="lazy"
+              loading='lazy'
             />
           </div>
         </div>
       </div>
     </ContainerSection>
   </div>
-  <!--======================= SOBRE MI =======================-->
-  <div class="py-24" id="servicios">
+  <!--======================= SERVICIOS ======================-->
+  <div class='py-24' id='servicios'>
     <ContainerSection>
       <div>
-        <h2 class="text-center text-3xl font-bold text-eden-800 md:text-5xl">
-          Servicios
-        </h2>
-        <p
-          class="mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800"
-        >
-          Acompañamiento personalizado para emprendedores que buscan transformar
-          su idea en un negocio rentable.
+        <h2 class='text-center text-3xl font-bold text-eden-800 md:text-5xl'>Servicios</h2>
+        <p class='mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800'>
+          Acompañamiento personalizado para emprendedores que buscan transformar su idea en un negocio rentable.
         </p>
       </div>
-      <div class="mt-20">
-        <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-          <div
-            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
-          >
-            <div class="flex items-center">
-              <div
-                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon
-                  name="hands-helping"
-                  class="size-16 text-jungle-green-600"
-                />
+      <div class='mt-20'>
+        <div class='grid grid-cols-1 gap-16 md:grid-cols-2'>
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'>
+                <Icon name='hands-helping' class='size-16 text-jungle-green-600' />
               </div>
             </div>
-            <div class="text-center md:text-start">
-              <h3 class="text-2xl font-semibold text-eden-800">
-                Coaching Personal
-              </h3>
-              <p class="pt-2 text-eden-800">
-                Sesiones de coaching personalizadas online para profesionales
-                1:1. Acompañamiento individualizado orientado a lo que realmente
-                importa, <strong class="font-semibold">tus éxitos</strong>.
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Coaching Personal</h3>
+              <p class='pt-2 text-eden-800'>
+                Sesiones de coaching personalizadas online para profesionales 1:1. Acompañamiento individualizado
+                orientado a lo que realmente importa, <strong class='font-semibold'>tus éxitos</strong>.
               </p>
-              <p class="pt-2 text-eden-800">
-                Si quieres relanzar tu carrera profesional este es tu programa
-                de coaching.
+              <p class='pt-2 text-eden-800'>
+                Si quieres relanzar tu carrera profesional este es tu programa de coaching.
               </p>
             </div>
           </div>
-          <div
-            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
-          >
-            <div class="flex items-center">
-              <div
-                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon name="book" class="size-16 text-jungle-green-600" />
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'>
+                <Icon name='book' class='size-16 text-jungle-green-600' />
               </div>
             </div>
-            <div class="text-center md:text-start">
-              <h3 class="text-2xl font-semibold text-eden-800">
-                Formación y Talleres
-              </h3>
-              <p class="pt-2 text-eden-800">
-                Formaciones online 1:1 y talleres grupales bajo de demanda.
-              </p>
-              <p class="pt-2 text-eden-800">
-                Gestión y desarrollo de equipos, liderazgo, gestión de
-                conflictos, mejora contínua de procesos, etc.
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Formación y Talleres</h3>
+              <p class='pt-2 text-eden-800'>Formaciones online 1:1 y talleres grupales bajo de demanda.</p>
+              <p class='pt-2 text-eden-800'>
+                Gestión y desarrollo de equipos, liderazgo, gestión de conflictos, mejora contínua de procesos, etc.
               </p>
             </div>
           </div>
-          <div
-            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
-          >
-            <div class="flex items-center">
-              <div
-                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon
-                  name="flow-connection"
-                  class="size-16 text-jungle-green-600"
-                />
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'>
+                <Icon name='flow-connection' class='size-16 text-jungle-green-600' />
               </div>
             </div>
-            <div class="text-center md:text-start">
-              <h3 class="text-2xl font-semibold text-eden-800">
-                Mejora de Procesos
-              </h3>
-              <p class="pt-2 text-eden-800">
-                Servicios de mejoras de procesos mediante la metodología Lean
-                Six Sigma.
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Mejora de Procesos</h3>
+              <p class='pt-2 text-eden-800'>Servicios de mejoras de procesos mediante la metodología Lean Six Sigma.</p>
+            </div>
+          </div>
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'>
+                <Icon name='suitcase' class='size-16 text-jungle-green-600' />
+              </div>
+            </div>
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Consultoría de Negocios</h3>
+              <p class='pt-2 text-eden-800'>
+                Servicio de consultoría para tu negocio, análisis de la situación actual del negocio, identificando
+                áreas de mejora y definición de un plan de acción.
               </p>
             </div>
           </div>
-          <div
-            class="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8"
-          >
-            <div class="flex items-center">
-              <div
-                class="flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600"
-              >
-                <Icon name="suitcase" class="size-16 text-jungle-green-600" />
+        </div>
+      </div>
+    </ContainerSection>
+  </div>
+  <!--===================== METODOLOGIA ======================-->
+  <div class='bg-loafer-100 py-24' id='metodologia'>
+    <ContainerSection>
+      <div>
+        <h2 class='text-center text-3xl font-bold text-eden-800 md:text-5xl'>Metodologia</h2>
+        <p class='mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800'>
+          Metodología de trabajo para acompañarte en el proceso de creación y desarrollo de tu negocio.
+        </p>
+      </div>
+      <div class='mt-20'></div>
+      <div class='grid grid-cols-1 items-start gap-10 sm:grid-cols-2'>
+        <div class='flex items-center justify-center h-full'>
+          <figure class='bg-white rounded-xl aspect-[3/4] p-10 flex items-center justify-center'>
+            <Image src={imageLogo0} alt='Hombre pensativo' class='rounded-lg' width={350} height={350} loading='lazy' />
+          </figure>
+        </div>
+        <div class='flex flex-col gap-8'>
+          <!--================== PASO 1 - COMPONENTE ===================-->
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-20 items-center justify-center rounded-full bg-white text-jungle-green-600'>
+                <Icon name='round-looks-one' class='size-12 text-jungle-green-600' />
               </div>
             </div>
-            <div class="text-center md:text-start">
-              <h3 class="text-2xl font-semibold text-eden-800">
-                Consultoría de Negocios
-              </h3>
-              <p class="pt-2 text-eden-800">
-                Servicio de consultoría para tu negocio, análisis de la
-                situación actual del negocio, identificando áreas de mejora y
-                definición de un plan de acción.
+            <div class='text-center md:text-start flex flex-col items-start justify-center'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Desafios</h3>
+              <p class='pt-2 text-eden-800'>
+                Identificamos los desafíos que enfrentas a diario y analizamos la situación actual del negocio.
+              </p>
+            </div>
+          </div>
+          <!--================== PASO 2 - COMPONENTE ===================-->
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-20 items-center justify-center rounded-full bg-white text-jungle-green-600'>
+                <Icon name='round-looks-two' class='size-12 text-jungle-green-600' />
+              </div>
+            </div>
+            <div class='text-center md:text-start flex flex-col items-start justify-center'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Opciones</h3>
+              <p class='pt-2 text-eden-800'>
+                Analizamos las opciones disponibles y definimos un plan de acción personalizado para impulsar tu
+                negocio.
+              </p>
+            </div>
+          </div>
+          <!--================== PASO 3 - COMPONENTE ===================-->
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-20 items-center justify-center rounded-full bg-white text-jungle-green-600'>
+                <Icon name='round-looks-three' class='size-12 text-jungle-green-600' />
+              </div>
+            </div>
+            <div class='text-center md:text-start flex flex-col items-start justify-center'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Consecuencias</h3>
+              <p class='pt-2 text-eden-800'>
+                Analizamos las consecuencias de cada opción y definimos un plan de acción personalizado para impulsar tu
+                negocio.
+              </p>
+            </div>
+          </div>
+          <!--================== PASO 4 - COMPONENTE ===================-->
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-20 items-center justify-center rounded-full bg-white text-jungle-green-600'>
+                <Icon name='round-looks-four' class='size-12 text-jungle-green-600' />
+              </div>
+            </div>
+            <div class='text-center md:text-start flex flex-col items-start justify-center'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Soluciones creativas</h3>
+              <p class='pt-2 text-eden-800'>
+                Buscamos soluciones creativas y definimos un plan de acción personalizado para impulsar tu negocio.
+              </p>
+            </div>
+          </div>
+          <!--================== PASO 5 - COMPONENTE ===================-->
+          <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <div class='flex items-center'>
+              <div class='flex size-20 items-center justify-center rounded-full bg-white text-jungle-green-600'>
+                <Icon name='round-looks-five' class='size-12 text-jungle-green-600' />
+              </div>
+            </div>
+            <div class='text-center md:text-start flex flex-col items-start justify-center'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Conclusiones</h3>
+              <p class='pt-2 text-eden-800'>
+                Analizamos las conclusiones y definimos un plan de acción personalizado para impulsar tu negocio.
               </p>
             </div>
           </div>
@@ -307,220 +336,209 @@ import ButtonPrimeraCita from "@utils/ButtonPrimeraCita.astro";
     </ContainerSection>
   </div>
   <!--================== NUESTROS CLIENTES ===================-->
-  <div class="border-t py-24">
-    <div class="mx-auto w-full max-w-screen-xl px-5">
-      <div class="flex flex-wrap items-center justify-center gap-10">
+  <div class='border-t py-24 border-b border-loafer-100'>
+    <div class='mx-auto w-full max-w-screen-xl px-5'>
+      <div class='flex flex-wrap items-center justify-center gap-10'>
         <div>
           <Image
             src={imageLogo1}
-            alt="Logo de empresa"
+            alt='Logo de empresa'
             width={143}
             height={34}
-            class="opacity-50 transition-opacity hover:opacity-100"
-            loading="lazy"
+            class='opacity-50 transition-opacity hover:opacity-100'
+            loading='lazy'
           />
         </div>
         <div>
           <Image
             src={imageLogo2}
-            alt="Logo de empresa"
+            alt='Logo de empresa'
             width={143}
             height={34}
-            class="opacity-50 transition-opacity hover:opacity-100"
-            loading="lazy"
+            class='opacity-50 transition-opacity hover:opacity-100'
+            loading='lazy'
           />
         </div>
 
         <div>
           <Image
             src={imageLogo3}
-            alt="Logo de empresa"
+            alt='Logo de empresa'
             width={143}
             height={34}
-            class="opacity-50 transition-opacity hover:opacity-100"
-            loading="lazy"
+            class='opacity-50 transition-opacity hover:opacity-100'
+            loading='lazy'
           />
         </div>
 
         <div>
           <Image
             src={imageLogo4}
-            alt="Logo de empresa"
+            alt='Logo de empresa'
             width={143}
             height={34}
-            class="opacity-50 transition-opacity hover:opacity-100"
-            loading="lazy"
+            class='opacity-50 transition-opacity hover:opacity-100'
+            loading='lazy'
           />
         </div>
 
         <div>
           <Image
             src={imageLogo5}
-            alt="Logo de empresa"
+            alt='Logo de empresa'
             width={143}
             height={34}
-            class="opacity-50 transition-opacity hover:opacity-100"
-            loading="lazy"
+            class='opacity-50 transition-opacity hover:opacity-100'
+            loading='lazy'
           />
         </div>
       </div>
     </div>
   </div>
+  <!--======================= SERVICIOS ======================-->
+  <div class='py-24' id='servicios'>
+    <ContainerSection>
+      <div>
+        <h2 class='text-center text-3xl font-bold text-eden-800 md:text-5xl'>Testimonios</h2>
+        <p class='mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800'>
+          Ellos ya han transformado su negocio con el coaching de Alejandro Escobar. ¿A qué esperas para dar el paso?
+        </p>
+      </div>
+      <div class='mt-20'>
+        <div class='grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3'>
+          <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+              <source src={videoTestimonio1} type='video/mp4' />
+            </video>
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 1</h3>
+              <p class='pt-2 text-eden-800'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+              <source src={videoTestimonio2} type='video/mp4' />
+            </video>
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 2</h3>
+              <p class='pt-2 text-eden-800'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+            <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+              <source src={videoTestimonio3} type='video/mp4' />
+            </video>
+            <div class='text-center md:text-start'>
+              <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 3</h3>
+              <p class='pt-2 text-eden-800'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ContainerSection>
+  </div>
   <!--======================== FOOTER ========================-->
-  <footer class="mt-16 bg-eden-800">
-    <div class="mx-auto w-full max-w-screen-xl px-5">
+  <footer class='mt-16 bg-eden-800'>
+    <div class='mx-auto w-full max-w-screen-xl px-5'>
       <div
-        class="-mt-20 mb-16 grid grid-cols-1 gap-10 rounded-xl bg-loafer-100 px-6 py-6 md:grid-cols-2 md:px-20 md:py-14"
+        class='-mt-20 mb-16 grid grid-cols-1 gap-10 rounded-xl bg-loafer-100 px-6 py-6 md:grid-cols-2 md:px-20 md:py-14'
       >
         <div>
-          <h3
-            class="max-w-sm text-2xl font-semibold leading-8 text-swamp-green-300 md:pr-6"
-          >
-            Todas las novedades directo a tu bandeja de entrada. <span
-              class="text-eden-800">Suscríbete al boletín semanal.</span
+          <h3 class='max-w-sm text-2xl font-semibold leading-8 text-swamp-green-300 md:pr-6'>
+            Todas las novedades directo a tu bandeja de entrada. <span class='text-eden-800'
+              >Suscríbete al boletín semanal.</span
             >
           </h3>
         </div>
-        <form action="">
-          <div
-            class="relative flex flex-col gap-5 rounded-2xl shadow-sm sm:flex-row sm:gap-0"
-          >
+        <form action=''>
+          <div class='relative flex flex-col gap-5 rounded-2xl shadow-sm sm:flex-row sm:gap-0'>
             <input
-              type="email"
-              name="email"
-              class="block flex-1 rounded-lg border-2 border-white bg-white px-6 py-5 ps-14 text-sm focus:z-10 focus:border-jungle-green-600 focus:outline-none sm:rounded-s-2xl"
-              placeholder="Tu correo electrónico"
+              type='email'
+              name='email'
+              class='block flex-1 rounded-lg border-2 border-white bg-white px-6 py-5 ps-14 text-sm focus:z-10 focus:border-jungle-green-600 focus:outline-none sm:rounded-s-2xl'
+              placeholder='Tu correo electrónico'
             />
-            <div
-              class="pointer-events-none absolute start-0 top-5 z-20 flex items-center ps-5 opacity-60 sm:inset-y-0"
-            >
-              <Icon name="mail" size={25} class="text-jungle-green-600" />
+            <div class='pointer-events-none absolute start-0 top-5 z-20 flex items-center ps-5 opacity-60 sm:inset-y-0'>
+              <Icon name='mail' size={25} class='text-jungle-green-600' />
             </div>
             <button
-              type="submit"
-              class="items-center justify-center gap-x-2 rounded-lg border border-transparent bg-jungle-green-600 px-8 py-5 font-semibold text-white hover:bg-eden-800 sm:rounded-e-2xl"
+              type='submit'
+              class='items-center justify-center gap-x-2 rounded-lg border border-transparent bg-jungle-green-600 px-8 py-5 font-semibold text-white hover:bg-eden-800 sm:rounded-e-2xl'
               >Suscribirme</button
             >
           </div>
         </form>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-10">
-        <div class="flex flex-col gap-4 items-center md:items-start">
-          <div class="text-center">
-            <Image
-              src={imageLogo0}
-              alt="Logo de Alejandro Escobar Coaching"
-              width={100}
-              height={100}
-              loading="lazy"
-            />
+      <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-10'>
+        <div class='flex flex-col gap-4 items-center md:items-start'>
+          <div class='text-center'>
+            <Image src={imageLogo0} alt='Logo de Alejandro Escobar Coaching' width={100} height={100} loading='lazy' />
           </div>
-          <h2
-            class="mb-4 text-4xl font-semibold text-white opacity-75 text-center md:text-left"
-          >
-            Alejandro Escobar
-          </h2>
+          <h2 class='mb-4 text-4xl font-semibold text-white opacity-75 text-center md:text-left'>Alejandro Escobar</h2>
         </div>
         <div>
-          <ul class="leading-10 text-center md:text-left">
+          <ul class='leading-10 text-center md:text-left'>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Sobre mi</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Sobre mi</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Metodologia</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Metodologia</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Servicios</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Servicios</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Testimonios</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Testimonios</a>
             </li>
           </ul>
         </div>
         <div>
-          <ul class="leading-10 text-center md:text-left">
+          <ul class='leading-10 text-center md:text-left'>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >LinkedIn</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>LinkedIn</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Zaask</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Zaask</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'
                 >WhatsApp Bussines</a
               >
             </li>
           </ul>
         </div>
         <div>
-          <ul class="leading-10 text-center md:text-left">
+          <ul class='leading-10 text-center md:text-left'>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Facebook</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Facebook</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >X</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>X</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Instagram</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Instagram</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-lg font-light text-white opacity-75 transition hover:opacity-100"
-                >Threads</a
-              >
+              <a href='#' class='text-lg font-light text-white opacity-75 transition hover:opacity-100'>Threads</a>
             </li>
           </ul>
         </div>
       </div>
       <div
-        class="mt-16 flex flex-col gap-2 border-t border-white border-opacity-20 py-10 text-center md:flex-row md:justify-between md:text-start"
+        class='mt-16 flex flex-col gap-2 border-t border-white border-opacity-20 py-10 text-center md:flex-row md:justify-between md:text-start'
       >
-        <p class="font-light text-white opacity-75">
-          © 2024 Alejandro Escobar. Todos los derechos reservados.
-        </p>
-        <p class="font-light text-white opacity-75">
-          Desarrollado por <a href="#" class="text-jungle-green-600"
-            >Manuel Denis Developer.</a
-          >
+        <p class='font-light text-white opacity-75'>© 2024 Alejandro Escobar. Todos los derechos reservados.</p>
+        <p class='font-light text-white opacity-75'>
+          Desarrollado por <a href='#' class='text-jungle-green-600'>Manuel Denis Developer.</a>
         </p>
       </div>
     </div>

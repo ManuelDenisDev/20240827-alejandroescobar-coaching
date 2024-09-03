@@ -15,7 +15,8 @@
       "@styles/*": ["src/styles/*"],
       "@svg/*": ["src/assets/svg/*"],
       "@ui/*": ["src/ui/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@videos/*": ["src/assets/videos/*"]
     }
   }
 }
