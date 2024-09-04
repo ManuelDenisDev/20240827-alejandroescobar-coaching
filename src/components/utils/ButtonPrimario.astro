@@ -1,0 +1,16 @@
+---
+//  =====================  META INFO  ==============================
+interface ButtonSecundarioProps {
+  href: string
+  texto: string
+  className?: string
+  target?: string
+}
+// ======================  VALORES POR DEFECTO =====================
+const { href = '#', texto = 'Botón', className = '', target = '_blank' } = Astro.props
+
+// =====================  CLASES POR DEFECTO =======================
+const combinedClasses = `w-full rounded-lg bg-jungle-green-600 px-8 py-5 text-lg font-medium text-white transition hover:text-white hover:bg-jungle-green-600 sm:w-auto ${className}`
+---
+
+<a href={href} target={target} class={combinedClasses}>{texto}</a>

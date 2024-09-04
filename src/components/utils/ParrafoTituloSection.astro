@@ -1,0 +1,14 @@
+---
+//  =====================  META INFO  ==============================
+interface ParrafoTituloSectionProps {
+  texto: string
+  className?: string
+}
+// ======================  VALORES POR DEFECTO =====================
+const { texto = 'Parrafo Título Section', className = '' } = Astro.props
+
+// =====================  CLASES POR DEFECTO =======================
+const combinedClasses = `mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800 ${className}`
+---
+
+<p class={combinedClasses}>{texto}</p>

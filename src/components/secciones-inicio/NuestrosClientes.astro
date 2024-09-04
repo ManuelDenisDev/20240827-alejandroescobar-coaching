@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets'
+
+import imageLogo1 from '@images/logo1.webp'
+import imageLogo2 from '@images/logo2.webp'
+import imageLogo3 from '@images/logo3.webp'
+import imageLogo4 from '@images/logo4.webp'
+import imageLogo5 from '@images/logo5.webp'
+---
+
+<div class='border-t py-24 border-b border-loafer-100'>
+  <div class='mx-auto w-full max-w-screen-xl px-5'>
+    <div class='flex flex-wrap items-center justify-center gap-10'>
+      <div>
+        <Image
+          src={imageLogo1}
+          alt='Logo de empresa'
+          width={143}
+          height={34}
+          class='opacity-50 transition-opacity hover:opacity-100'
+          loading='lazy'
+        />
+      </div>
+      <div>
+        <Image
+          src={imageLogo2}
+          alt='Logo de empresa'
+          width={143}
+          height={34}
+          class='opacity-50 transition-opacity hover:opacity-100'
+          loading='lazy'
+        />
+      </div>
+
+      <div>
+        <Image
+          src={imageLogo3}
+          alt='Logo de empresa'
+          width={143}
+          height={34}
+          class='opacity-50 transition-opacity hover:opacity-100'
+          loading='lazy'
+        />
+      </div>
+
+      <div>
+        <Image
+          src={imageLogo4}
+          alt='Logo de empresa'
+          width={143}
+          height={34}
+          class='opacity-50 transition-opacity hover:opacity-100'
+          loading='lazy'
+        />
+      </div>
+
+      <div>
+        <Image
+          src={imageLogo5}
+          alt='Logo de empresa'
+          width={143}
+          height={34}
+          class='opacity-50 transition-opacity hover:opacity-100'
+          loading='lazy'
+        />
+      </div>
+    </div>
+  </div>
+</div>

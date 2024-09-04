@@ -1,0 +1,28 @@
+---
+import CardIconoTituloDescripcion from '@utils/CardIconoTituloDescripcion.astro'
+import ContainerSection from '@ui/ContainerSection.astro'
+import TituloSection from '@utils/TituloSection.astro'
+
+import { SectionServiciosTitulo, SectionServiciosDescripcion, SectionServiciosItems } from '@src/lib/SectionServicios'
+import ParrafoTituloSection from '../utils/ParrafoTituloSection.astro'
+
+const ServiciosCard = SectionServiciosItems
+---
+
+<div class='py-24' id='servicios'>
+  <ContainerSection>
+    <div>
+      <TituloSection texto={SectionServiciosTitulo} />
+      <ParrafoTituloSection texto={SectionServiciosDescripcion} />
+    </div>
+    <div class='mt-20'>
+      <div class='grid grid-cols-1 gap-16 md:grid-cols-2'>
+        {
+          ServiciosCard.map((item, index) => (
+            <CardIconoTituloDescripcion icono={item.icono} titulo={item.titulo} descripcion={item.descripcion} />
+          ))
+        }
+      </div>
+    </div>
+  </ContainerSection>
+</div>

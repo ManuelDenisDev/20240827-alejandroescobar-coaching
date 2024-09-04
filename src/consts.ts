@@ -1,5 +1,16 @@
-export const SITE_TITLE = "Alejandro Escobar";
-export const SITE_TAGLINE =
-  "Coaching para emprendedores 🚀 De Emprendedor a Empresario 🚀 🌟Transforma tu negocio ¡YA! 🌟 Sesiones 1:1 totalmente individualizadas y seguimiento continuo"; // site tagline
+export const SITE_TITLE = 'Alejandro Escobar'
+export const SITE_TAGLINE = '🚀 De Emprendedor a Empresario 🚀'
 export const SITE_DESCRIPTION =
-  "Coaching para emprendedores 🚀 De Emprendedor a Empresario 🚀 🌟Transforma tu negocio ¡YA! 🌟 Sesiones 1:1 totalmente individualizadas y seguimiento continuo"; // site meta description for SEO
+  'Coaching para emprendedores 🌟Transforma tu negocio ¡YA! 🌟 Sesiones 1:1 totalmente individualizadas y seguimiento continuo'
+export const SITE_URL = 'https://alejandroescobar.com'
+export const SITE_LANG = 'es'
+export const SITE_IMAGE = `${SITE_URL}/handshake.jpg`
+export const SITE_ICONO = 'alejandro-escobar-logo-vector-web'
+export const SITE_FAVICON = '/favicon.svg'
+export const SITE_TWITTER = '@alejandroescobr'
+export const SITE_FACEBOOK = 'alejandroescobar'
+export const SITE_INSTAGRAM = 'alejandroescobar'
+export const SITE_LINKEDIN = 'alejandroescobar'
+export const SITE_EMAIL = ''
+export const SITE_PHONE = ''
+export const SITE_ADDRESS = ''

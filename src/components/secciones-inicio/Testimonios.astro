@@ -1,0 +1,58 @@
+---
+import ContainerSection from '@ui/ContainerSection.astro'
+
+import videoTestimonio1 from '@videos/testimonio1.mp4'
+import videoTestimonio2 from '@videos/testimonio2.mp4'
+import videoTestimonio3 from '@videos/testimonio3.mp4'
+---
+
+<div class='py-24' id='testimonios'>
+  <ContainerSection>
+    <div>
+      <h2 class='text-center text-3xl font-bold text-eden-800 md:text-5xl'>Testimonios</h2>
+      <p class='mx-auto mt-6 max-w-4xl text-center text-lg font-medium leading-snug text-eden-800'>
+        Ellos ya han transformado su negocio con el coaching de Alejandro Escobar. ¿A qué esperas para dar el paso?
+      </p>
+    </div>
+    <div class='mt-20'>
+      <div class='grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3'>
+        <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+          <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+            <source src={videoTestimonio1} type='video/mp4' />
+          </video>
+          <div class='text-center md:text-start'>
+            <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 1</h3>
+            <p class='pt-2 text-eden-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+          <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+            <source src={videoTestimonio2} type='video/mp4' />
+          </video>
+          <div class='text-center md:text-start'>
+            <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 2</h3>
+            <p class='pt-2 text-eden-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class='flex flex-col justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
+          <video class='rounded-lg aspect-video' controls='' autoplay='' transition:persist>
+            <source src={videoTestimonio3} type='video/mp4' />
+          </video>
+          <div class='text-center md:text-start'>
+            <h3 class='text-2xl font-semibold text-eden-800'>Testimonio 3</h3>
+            <p class='pt-2 text-eden-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ContainerSection>
+</div>

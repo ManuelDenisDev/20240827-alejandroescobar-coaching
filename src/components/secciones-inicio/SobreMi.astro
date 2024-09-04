@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets'
+
+import ContainerSection from '../ui/ContainerSection.astro'
+
+import {
+  SectionSobreMiTitulo,
+  SectionSobreMiDescripcion,
+  SectionSobreMiImagen,
+  SectionSobreMiItems
+} from '@src/lib/SectionSobreMi'
+import CardSobreMi from '../utils/CardSobreMi.astro'
+import TituloSection from '../utils/TituloSection.astro'
+import ParrafoTituloSection from '../utils/ParrafoTituloSection.astro'
+
+const SobreMiCard = SectionSobreMiItems
+---
+
+<section class='py-24' id='sobre-mi'>
+  <ContainerSection>
+    <div class='z-10 mb-14'>
+      <TituloSection texto={SectionSobreMiTitulo} />
+      <ParrafoTituloSection texto={SectionSobreMiDescripcion} />
+    </div>
+    <div class='grid gap-14 md:grid-cols-3'>
+      <div class='md:col-span-2'>
+        <Image
+          src={SectionSobreMiImagen.src}
+          alt={SectionSobreMiImagen.alt}
+          class='rounded-lg object-cover h-full w-full'
+          width={1152}
+          height={768}
+          loading='lazy'
+        />
+      </div>
+      <div class='flex flex-col gap-6'>
+        {
+          SobreMiCard.map((item, index) => (
+            <CardSobreMi icono={item.icono} titulo={item.titulo} descripcion={item.descripcion} />
+          ))
+        }
+      </div>
+    </div>
+  </ContainerSection>
+</section>

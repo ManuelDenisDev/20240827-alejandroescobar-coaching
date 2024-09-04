@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+
+import ButtonPrimario from '@utils/ButtonPrimario.astro'
+import ContainerSection from '@ui/ContainerSection.astro'
+
+import imagePensive from '@images/pensive-man-looking-white-board.jpg'
+---
+
+<div class='bg-loafer-100 py-24'>
+  <ContainerSection>
+    <div class='grid grid-cols-1 items-center gap-10 sm:grid-cols-2'>
+      <div class='flex flex-col gap-8'>
+        <h3 class='max-w-xl text-3xl font-bold leading-normal text-eden-800 text-balance md:text-4xl'>
+          Transforma tu negocio con sesiones de coaching 1:1 personalizadas.
+        </h3>
+        <p class='text-lg leading-8 text-eden-800 text-wrap'>
+          Reserva una sesión de coaching para emprendedores, sin compromiso alguno. Exploraremos juntos los desafíos que
+          enfrentas a diario, analizaremos la situación actual del negocio y crearemos un plan de acción personalizado
+          para impulsar tu negocio e iniciar los cambios necesarios para alcanzar las metas que te marques.
+        </p>
+        <p class='text-lg leading-8 text-eden-800 text-wrap'>
+          ¿Estás listo para transformar tu negocio y llevarlo al siguiente nivel? ¡Reserva tu primera sesión de coaching
+          gratuita!
+        </p>
+        <div class='flex items-center text-center'>
+          <ButtonPrimario href='#' texto='Reserva 1º Cita' />
+        </div>
+      </div>
+      <div class='relative'>
+        <div class='absolute -right-1/4 -top-1/4 z-0 hidden 2xl:block text-pale-leaf-200/20'>
+          <Icon name='bg-element-02' size={351} />
+        </div>
+        <div class='relative z-10'>
+          <Image src={imagePensive} alt='Hombre pensativo' class='rounded-lg' width={640} height={441} loading='lazy' />
+        </div>
+      </div>
+    </div>
+  </ContainerSection>
+</div>

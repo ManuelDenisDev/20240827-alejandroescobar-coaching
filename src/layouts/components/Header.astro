@@ -1,0 +1,58 @@
+---
+import { HeaderLinks } from '@lib/HeaderLinks'
+import ButtonPrimario from '@src/components/utils/ButtonPrimario.astro'
+import ButtonSecundario from '@src/components/utils/ButtonSecundario.astro'
+import LogoHeader from './LogoHeader.astro'
+import ToggleMenu from './ToggleMenu.astro'
+
+const NavLinks = HeaderLinks
+
+const { iconoLogo, titulo } = Astro.props
+---
+
+<div class='bg-loafer-100'>
+  <div class='mx-auto w-full max-w-screen-xl px-5'>
+    <header class='flex flex-col items-center justify-between py-5 lg:flex-row'>
+      <div class='flex w-full items-center justify-between lg:w-auto'>
+        <LogoHeader tituloLogo={titulo} iconoLogo={iconoLogo} />
+        <ToggleMenu />
+      </div>
+      <nav class='mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto navmenu-toggle'>
+        <ul class='flex flex-col lg:flex-row lg:gap-3'>
+          {
+            NavLinks.map((item, index) => (
+              <li>
+                <a href={item.href} class='flex items-center py-2 text-eden-800 hover:text-jungle-green-600 lg:px-3'>
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+
+          {}
+        </ul>
+        <div class='mt-3 flex items-center gap-4 lg:hidden'>
+          <ButtonSecundario texto='Reservar 1º Cita' href='#' className='text-center' />
+          <ButtonPrimario texto='WhatsApp' href='#' className='text-center' />
+        </div>
+      </nav>
+      <div>
+        <div class='hidden items-center gap-4 lg:flex'>
+          <ButtonPrimario texto='WhatsApp' href='#' className='text-center' />
+        </div>
+        <!-- <ButtonsThemes /> -->
+      </div>
+    </header>
+  </div>
+</div>
+
+<script>
+  const menuButton = document.getElementById('menu')
+  if (menuButton) {
+    menuButton.addEventListener('click', () => {
+      ;[...document.querySelectorAll('.navmenu-toggle')].forEach((Element) => {
+        Element.classList.toggle('hidden')
+      })
+    })
+  }
+</script>

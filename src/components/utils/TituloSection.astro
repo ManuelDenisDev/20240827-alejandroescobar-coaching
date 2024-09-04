@@ -1,0 +1,14 @@
+---
+//  =====================  META INFO  ==============================
+interface TituloSectionProps {
+  texto: string
+  className?: string
+}
+// ======================  VALORES POR DEFECTO =====================
+const { texto = 'Título Section', className = '' } = Astro.props
+
+// =====================  CLASES POR DEFECTO =======================
+const combinedClasses = `text-center text-3xl font-bold text-eden-800 md:text-5xl ${className}`
+---
+
+<h2 class={combinedClasses}>{texto}</h2>

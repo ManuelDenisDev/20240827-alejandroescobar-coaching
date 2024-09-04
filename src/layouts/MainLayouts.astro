@@ -1,23 +1,28 @@
 ---
-import Header from "@components/Header.astro";
-import BaseHead from "@layouts/components/BaseHead.astro";
-import Themes from "astro-themes";
-import "@styles/global.css";
+import Header from '@src/layouts/components/Header.astro'
+import BaseHead from '@layouts/components/BaseHead.astro'
+import Themes from 'astro-themes'
+import '@styles/global.css'
+import Footer from './components/Footer.astro'
+import ToggleScroll from './components/ToggleScroll.astro'
 
-const { title, description, image } = Astro.props;
+const { titulo, tagline, descripcion, imagen, idioma, iconoLogo } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={idioma} class='scroll-smooth'>
   <head>
-    <Themes defaultTheme="dark" />
-    <BaseHead title={title} description={description} image={image} />
+    <Themes defaultTheme='dark' />
+    <BaseHead title={titulo} tagline={tagline} description={descripcion} image={imagen} />
   </head>
-  <body
-    class="flex min-h-full flex-col font-sans antialiased bg-white text-eden-800 appearance-none"
-  >
-    <Header />
+  <body class='flex min-h-full flex-col font-sans antialiased bg-white text-eden-800 appearance-none'>
+    <!--======================== HEADER ========================-->
+    <Header iconoLogo={iconoLogo} titulo={titulo} />
+    <ToggleScroll />
+    <!--========================  MAIN  ========================-->
     <slot />
+    <!--======================== FOOTER ========================-->
+    <Footer />
   </body>
 </html>
 
@@ -30,12 +35,12 @@ const { title, description, image } = Astro.props;
     --text-primary-accent: #cdddc0;
   }
 
-  [data-theme="light"] {
+  [data-theme='light'] {
     --background-color: white;
     --text-color: var(--text-primary-strong);
   }
 
-  [data-theme="dark"] {
+  [data-theme='dark'] {
     --background-color: white;
     --text-color: var(--text-primary-strong);
   }

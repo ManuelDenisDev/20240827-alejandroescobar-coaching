@@ -14,8 +14,8 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@svg/*": ["src/assets/svg/*"],
-      "@ui/*": ["src/ui/*"],
-      "@utils/*": ["src/utils/*"],
+      "@ui/*": ["src/components/ui/*"],
+      "@utils/*": ["src/components/utils/*"],
       "@videos/*": ["src/assets/videos/*"]
     }
   }

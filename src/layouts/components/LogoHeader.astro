@@ -1,0 +1,10 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { iconoLogo, tituloLogo } = Astro.props
+---
+
+<a href='/' class='text-lg flex gap-2 items-center'>
+  <Icon name={iconoLogo} class={`translate-y-1`} size={40} />
+  <span class='text-xl font-semibold text-eden-800'>{tituloLogo}</span>
+</a>
