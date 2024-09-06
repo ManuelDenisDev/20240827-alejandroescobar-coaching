@@ -1,4 +1,3 @@
-
 # Alejandro Escobar Coaching - Sitio Web
 
 Este proyecto es un sitio web para un coach, desarrollado con AstroBuild, Tailwind CSS y TypeScript.
@@ -16,6 +15,7 @@ Este proyecto es un sitio web para un coach, desarrollado con AstroBuild, Tailwi
    git clone https://github.com/ManuelDenisDev/20240827-alejandroescobar-coaching
    ```
 2. Instala las dependencias:
+
    ```bash
    npm install
    ```
@@ -44,3 +44,11 @@ Este proyecto es un sitio web para un coach, desarrollado con AstroBuild, Tailwi
 
 El sitio puede desplegarse usando servicios como Vercel, Netlify o similares. Asegúrate de tener las configuraciones correctas para Astro y Tailwind.
 
+## Colores y Fuentes
+
+### Colores
+
+- **Primario**: `#58666D` (gris azulado) tailwind: `gray-600`
+- **Secundario**: `#0F5FA0` (azul oscuro) tailwind: `sky-700`
+- **Terciario**: `#1BB4B9` (azul claro) tailwind: `teal-500`
+- **Cuaternario**: `#F39200` (naranja) tailwind: `amber-500`

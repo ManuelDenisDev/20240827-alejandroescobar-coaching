@@ -1,10 +1,15 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 
 const { iconoLogo, tituloLogo } = Astro.props
+
+const imageLogo = '/public/svg/deg-logo-01-vector-web.svg'
 ---
 
 <a href='/' class='text-lg flex gap-2 items-center'>
-  <Icon name={iconoLogo} class={`translate-y-1`} size={40} />
-  <span class='text-xl font-semibold text-eden-800'>{tituloLogo}</span>
+  <Image src={imageLogo} alt='Logo' class='' width={100} height={100} />
+  <h1 class='text-3xl flex flex-col text-gray-600 lowercase -tracking-widest'>
+    <span class='translate-y-1'>alejandro</span>
+    <span class='-translate-y-1.5'>escobar</span>
+  </h1>
 </a>

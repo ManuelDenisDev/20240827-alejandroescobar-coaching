@@ -10,7 +10,9 @@ interface ButtonSecundarioProps {
 const { href = '#', texto = 'Botón', className = '', target = '_blank' } = Astro.props
 
 // =====================  CLASES POR DEFECTO =======================
-const combinedClasses = `w-full rounded-lg bg-white px-8 py-4 text-sm md:text-lg font-medium text-eden-800 transition hover:text-white hover:bg-jungle-green-600 sm:w-auto ${className}`
+// const combinedClasses = `px-8 py-4 transition ${className}`
+
+const combinedClasses = `w-full sm:w-auto text-sm md:text-lg text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-200 dark:focus:ring-amber-700 rounded-lg text-sm px-5 py-2.5 text-center ${className}`
 ---
 
 <a href={href} target={target} class={combinedClasses}>{texto}</a>
