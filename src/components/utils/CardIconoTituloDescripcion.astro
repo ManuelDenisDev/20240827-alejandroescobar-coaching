@@ -14,12 +14,12 @@ const { icono, titulo = 'Titulo', descripcion = 'Descripcion' } = Astro.props
 
 <div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8'>
   <div class='flex items-center'>
-    <div class='flex size-28 items-center justify-center rounded-full bg-loafer-100 text-jungle-green-600'>
-      <Icon name={icono} class='size-16 text-jungle-green-600' />
+    <div class='flex size-28 items-center justify-center rounded-full fondo'>
+      <Icon name={icono} class='size-16 text-white' />
     </div>
   </div>
   <div class='text-center md:text-start'>
-    <h3 class='text-2xl font-semibold text-eden-800'>{titulo}</h3>
-    <p class='pt-2 text-eden-800'>{descripcion}</p>
+    <h3 class='text-2xl font-semibold text-gray-600 underline decoration-amber-500'>{titulo}</h3>
+    <p class='pt-2 text-gray-600'>{descripcion}</p>
   </div>
 </div>

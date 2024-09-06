@@ -2,17 +2,17 @@
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 
-import imageLogo0 from '@svg/logo-nuevo.svg'
+import imageLogo from '@svg/w-logo-03-vector-web.svg'
 ---
 
-<footer class='mt-16 bg-eden-800'>
+<footer class='mt-16 fondo'>
   <div class='mx-auto w-full max-w-screen-xl px-5'>
     <div
-      class='-mt-20 mb-16 grid grid-cols-1 gap-10 rounded-xl bg-loafer-100 px-6 py-6 md:grid-cols-2 md:px-20 md:py-14'
+      class='-mt-20 mb-16 grid grid-cols-1 gap-10 rounded-xl bg-sky-700 px-6 py-6 md:grid-cols-2 md:px-20 md:py-14 shadow-xl'
     >
       <div>
-        <h3 class='max-w-sm text-2xl font-semibold leading-8 text-swamp-green-300 md:pr-6'>
-          Todas las novedades directo a tu bandeja de entrada. <span class='text-eden-800'
+        <h3 class='max-w-sm text-2xl font-semibold leading-8 text-white md:pr-6'>
+          Todas las novedades directo a tu bandeja de entrada. <span class='text-amber-500'
             >Suscríbete al boletín semanal.</span
           >
         </h3>
@@ -26,22 +26,21 @@ import imageLogo0 from '@svg/logo-nuevo.svg'
             placeholder='Tu correo electrónico'
           />
           <div class='pointer-events-none absolute start-0 top-5 z-20 flex items-center ps-5 opacity-60 sm:inset-y-0'>
-            <Icon name='mail' size={25} class='text-jungle-green-600' />
+            <Icon name='mail' size={25} class='text-sky-700' />
           </div>
           <button
             type='submit'
-            class='items-center justify-center gap-x-2 rounded-lg border border-transparent bg-jungle-green-600 px-8 py-5 font-semibold text-white hover:bg-eden-800 sm:rounded-e-2xl'
+            class='items-center justify-center gap-x-2 rounded-lg border border-transparent px-8 py-5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-200 dark:focus:ring-amber-700 text-white sm:rounded-e-2xl'
             >Suscribirme</button
           >
         </div>
       </form>
     </div>
     <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-10'>
-      <div class='flex flex-col gap-4 items-center md:items-start'>
-        <div class='text-center'>
-          <Image src={imageLogo0} alt='Logo de Alejandro Escobar Coaching' width={100} height={100} loading='lazy' />
-        </div>
-        <h2 class='mb-4 text-4xl font-semibold text-white opacity-75 text-center md:text-left'>Alejandro Escobar</h2>
+      <div class='flex flex-col gap-4 items-center md:items-start mb-8'>
+        <figure class='text-center'>
+          <Image src={imageLogo} alt='Logo de Alejandro Escobar Coaching' width={200} height={200} loading='lazy' />
+        </figure>
       </div>
       <div>
         <ul class='leading-10 text-center md:text-left'>
@@ -96,7 +95,8 @@ import imageLogo0 from '@svg/logo-nuevo.svg'
     >
       <p class='font-light text-white opacity-75'>© 2024 Alejandro Escobar. Todos los derechos reservados.</p>
       <p class='font-light text-white opacity-75'>
-        Desarrollado por <a href='#' class='text-jungle-green-600'>Manuel Denis Developer.</a>
+        Desarrollado por <a href='#' class='decoration-amber-500 decoration-double underline'>Manuel Denis Developer.</a
+        >
       </p>
     </div>
   </div>

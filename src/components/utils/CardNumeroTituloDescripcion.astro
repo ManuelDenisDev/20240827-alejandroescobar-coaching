@@ -1,0 +1,25 @@
+---
+//  =====================  DEPENDENCIAS  ===========================
+import { Icon } from 'astro-icon/components'
+
+//  =====================  INTERFACES  =============================
+interface CardNumeroTituloDescripcionProps {
+  icono: string
+  titulo: string
+  descripcion: string
+}
+
+const { icono, titulo = 'Titulo', descripcion = 'Descripcion' } = Astro.props
+---
+
+<div class='flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:justify-start sm:gap-8 group'>
+  <div class='flex items-center'>
+    <div class='flex size-20 items-center justify-center rounded-full bg-white group-hover:bg-white/80'>
+      <Icon name={icono} class='size-12 text-teal-500 group-hover:text-sky-700 transition-colors duration-300' />
+    </div>
+  </div>
+  <div class='text-center md:text-start flex flex-col items-center md:items-start justify-center'>
+    <h3 class='text-2xl font-semibold text-white underline decoration-amber-500'>{titulo}</h3>
+    <p class='pt-2 text-white/80 group-hover:text-white'>{descripcion}</p>
+  </div>
+</div>
